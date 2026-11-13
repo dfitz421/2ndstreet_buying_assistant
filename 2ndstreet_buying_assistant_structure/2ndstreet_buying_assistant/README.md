@@ -2,7 +2,7 @@
 
 A small proof-of-concept project based on my experience working in secondhand clothing retail.
 
-The goal is to simplify the process of identifying and entering higher-value clothing items into a store's buying system. Currently, buyers need to research products for pricing and manually enter details such as brand, item name, category, material, and color into the buying form.
+The goal is to simplify the process of identifying and entering higher-value (or "S-Rank") clothing items into a store's buying system. Currently, buyers need to research products for pricing and manually enter details such as brand, item name, category, material, and color into the buying form.
 
 This project explores using AI to identify products from model numbers or photos of clothing tags and automatically fill in that information. Buyers would then verify the details, manually enter sizing and pricing, and add the item to a mock buying estimate.
 
