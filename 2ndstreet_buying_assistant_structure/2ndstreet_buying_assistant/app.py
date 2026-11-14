@@ -9,7 +9,7 @@ st.caption("S-rank buying form — early proof of concept. AI autofill will be a
 # dropdown choices
 GENERAL_CATEGORIES = ["Clothing", "Footwear", "Accessories"]
 SPECIFIC_CATEGORIES = ["Men's tops", "Men's bottoms", "Women's tops", "Women's bottoms", "Men's footwear", "Women's footwear", "Accessories"]
-ITEM_TYPES = ["Jacket", "Blazer", "Shirt", "T-shirt", "Sweater", "Sweatshirt" "Jeans", "Trousers", "Dress", "Sneakers", "Boots", "Bag", "Other"]
+ITEM_TYPES = ["Jacket", "Blazer", "Shirt", "T-shirt", "Sweater", "Sweatshirt", "Jeans", "Trousers", "Dress", "Sneakers", "Boots", "Bag", "Other"]
 MATERIALS = ["Cotton", "Denim", "Wool", "Leather", "Polyester", "Nylon", "Silk", "Other / Unknown"]
 COLORS = ["Black", "White", "Gray", "Brown", "Beige", "Blue", "Green", "Red", "Yellow", "Pink", "Purple", "Multicolor", "Other / Unknown"]
 PATTERNS = ["Solid", "Striped", "Plaid", "Graphic", "Floral", "Camouflage", "Other / Unknown"]
