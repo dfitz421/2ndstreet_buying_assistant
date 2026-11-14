@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# API keys
+.env
+.streamlit/secrets.toml
+
+# VS Code
+.vscode/
