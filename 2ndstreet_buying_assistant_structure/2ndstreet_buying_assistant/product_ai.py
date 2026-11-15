@@ -24,23 +24,31 @@ class ProductDetails(BaseModel):
 def identify_product(api_key, designer_hint="", product_code="", photos=None, options=None):
     client = genai.Client(api_key=api_key)
 
-    prompt = f"""
-    Identify this secondhand fashion item using the information and/or photos provided.
-    Use Google Search when needed to research the exact product.
+   prompt = f"""
+    Identify this secondhand clothing item using the provided photos
+    and any available product information.
 
     Designer/brand: {designer_hint}
     Product code: {product_code}
 
+    If a product code is provided, use it to research the exact item.
+
+    If no product code is provided, identify the item using the photos.
+    Examine the brand label, care tags, garment design, and distinctive
+    details. Use Google Search to help identify the item when possible.
+
+    Extract the brand, item name, category, material, color, pattern,
+    and season when supported by the available information.
+
     Allowed dropdown choices: {json.dumps(options or {})}
 
-    Return the most accurate product information you can find.
-    For dropdown fields, use ONLY an exact choice from the allowed list, or leave it blank.
-    Do not guess the model, season, material, or other details.
-    A number on a care tag may not be a product code.
-    If something cannot be verified, leave it blank and explain in notes.
-    Do not authenticate the item or recommend selling/buying prices.
-    """
+    Use only values from the allowed dropdown lists.
+    If the exact item cannot be identified, fill in the information
+    that is supported and leave uncertain fields blank.
 
+    Explain any uncertainty in the notes field.
+    Do not authenticate items or determine buying/selling prices.
+    """
     inputs = [{"type": "text", "text": prompt}]
 
     # include all photos
